@@ -1,12 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     text-decoration: none;
     align-items: center;
+    font-family: 'Pixelify Sans', sans-serif;
+
 }
 
 html {
-    background-image: url('../images/CrystalCave8k.png');
+    background-image: url('../images/CrystalCave8k2.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -22,6 +26,7 @@ body {
 
 
 header {
+    transition: 1.5s;
     color: white;
     flex-wrap: nowrap;
     display: flex;
@@ -35,17 +40,25 @@ header {
     box-shadow: 0px 0px 5px #fdfdfd;
 }
 
+main {
+    transition: 1.5s;
+    margin: 20px;
+    border: 2px solid green;
+    color: white;
+}
+
+
+
 .Logo {
     margin: 20px;
     font-size: 20px;
 }
 
-
 .Navigation {
     display: flex;
     flex-direction: row;
     font-size: 20px;
-    margin: 10px;
+    gap: 10px;
 }
 
 .Navigation a {
@@ -62,14 +75,47 @@ header {
 
 }
 
-
-main {
-    margin: 20px;
-    border: 2px solid green;
-    color: white;
+/* ----- Main ----- */
+.card {
+    width: 220px;
+    height: 320px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: girar 15s linear infinite;
 }
 
+@keyframes girar {
+    from {
+        transform: rotateY(0deg);
+    }
 
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+.face {
+    position: absolute;
+    inset: 0;
+    border-radius: 14px;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* FRENTE: coloque o caminho da imagem da frente da carta */
+.front {
+
+    background-image: url("../images/PequenaMaga.webp");
+}
+
+/* VERSO: coloque o caminho da imagem do verso da carta */
+.back {
+    background-image: url("../images/CardBack.png");
+    transform: rotateY(180deg);
+}
 
 
 /*
