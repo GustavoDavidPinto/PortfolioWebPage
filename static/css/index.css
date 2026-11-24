@@ -22,7 +22,7 @@ body {
     /* border: 2px solid rgb(255, 0, 0); */
     margin-left: 10vw;
     margin-right: 10vw;
-    
+
 
 }
 
@@ -63,18 +63,29 @@ main {
 }
 
 .Navigation a {
-    transition: color .3s ease-in-out;
     margin-right: 3vw;
     color: white;
+    position: relative;
 }
 
-.Navigation a:hover {
 
-    transition: color .3s ease-in-out;
-    text-shadow: 0px 0px 10px #fdfdfd;
-    color: rgb(1, 211, 248);
-
+/* 
+.Navigation a::after {
+    content: "";
+    width: 0%;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: red;
+    transition: 0.5s ease-in-out;
+    border-radius: 10px;
 }
+
+.Navigation a:hover::after {
+    width: 100%;
+}
+ */
 
 /* ----- Main ----- */
 
@@ -89,6 +100,7 @@ main {
     width: 50%;
     font-size: 20px;
     color: white;
+    text-shadow: 1px 1px 2px black;
 }
 
 
